@@ -22,7 +22,7 @@ const Signup = () => {
       console.log(user)
 
      
-      fetch('',{
+      fetch('https://test.nexisLtd.com/signup',{
         method:'POST',
         headers:{
           'content-type':'application/json'},
