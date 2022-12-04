@@ -54,9 +54,9 @@ const Signup = () => {
     <>
       <form onSubmit={(e)=>handleSubmit(e)}>
       
-        <div className="form-container w-516 h-630 border-2 flex flex-col items-center">
+        <div className=" w-80  h-448 border-2 flex flex-col items-center shadow-bShadow md:w-640 md:mb-10 lg:w-480 lg:mr-5 xl:w-640 ">
           <div className="Title">
-            <h1 className="font-semibold text-lg mb-24 mt-16">{FormTitles[page]}</h1>
+            <h1 className="font-semibold text-lg mb-10 mt-16">{FormTitles[page]}</h1>
           </div>
           <div className="form-input">{PageDisplay()}</div>
           <div className="button flex flex-row items-center justify-center gap-10">

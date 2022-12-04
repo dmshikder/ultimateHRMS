@@ -58,7 +58,7 @@ const Login = () => {
         />
         <input onChange={(e)=>setPassword(e.target.value)}
           className="border-b w-368"
-          type="text"
+          type="password"
           name=""
           id=""
           placeholder="Write Password"

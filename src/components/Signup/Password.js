@@ -11,7 +11,7 @@ const Password = ({ formData, setFormData }) => {
         placeholder="Write Password"
         onChange={(e)=>setFormData({...formData, password:e.target.value})}
           value={formData.password}
-      />
+       required/>
       
       <p>Your password must be 8 character</p>
     </div>
