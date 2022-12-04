@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
 import image from '../../assets/image.png';
 import Logo from '../../assets/svg/Logo';
 const Login = () => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate()
 
   function handleSubmit(e){
     e.preventDefault();
@@ -20,11 +22,15 @@ const Login = () => {
     })
     .then(res=>res.json())
       .then(data=>{
-        console.log(data)
-       
+        console.log('tt',data)
+        localStorage.setItem('accessToken', data.access_token)
+        navigate('/attendance')
+        
+        
       })
-
-  }
+      
+    }
+    
 
 
 
