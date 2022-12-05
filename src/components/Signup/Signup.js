@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import NextBtn from "../../assets/NextBtn";
 import OtherInfo from './OtherInfo';
 import Password from './Password';
 import PersonalInfo from './PersonalInfo';
@@ -16,10 +17,11 @@ const Signup = () => {
 
     })
 
+
     function handleSubmit(e){
       e.preventDefault();
       const user = formData;
-      console.log(user)
+      console.log(user.password)
 
      
       fetch('https://test.nexisLtd.com/signup',{
@@ -34,7 +36,6 @@ const Signup = () => {
         console.log(data)
       })
     }
-
 
 
     const FormTitles = ['SignUp Form','SignUp Form', 'SignUp Form'];
@@ -54,9 +55,9 @@ const Signup = () => {
     <>
       <form onSubmit={(e)=>handleSubmit(e)}>
       
-        <div className=" w-80  h-448 border-2 flex flex-col items-center shadow-bShadow md:w-640 md:mb-10 lg:w-480 lg:mr-5 xl:w-640 ">
-          <div className="Title">
-            <h1 className="font-semibold text-lg mb-10 mt-16">{FormTitles[page]}</h1>
+        <div className=" w-80  h-448 border-2 flex flex-col items-center shadow-bShadow md:w-640 md:mb-10 lg:w-480 lg:mr-5 xl:w-640 bg-white">
+          <div>
+            <h1 className="font-semibold text-xl mb-10 mt-16 md:text-3xl">{FormTitles[page]}</h1>
           </div>
           <div className="form-input">{PageDisplay()}</div>
           <div className="button flex flex-row items-center justify-center gap-10">
@@ -77,9 +78,9 @@ const Signup = () => {
 
               }
                 
-            }} className="w-36 h-12 mt-16 bg-blueEyes rounded-2xl text-white text-base flex flex-row items-center justify-center gap-4">
+            }} className="w-36 h-12 mt-16 hover:bg-blueEyes bg-white border-2 border-blueEyes rounded-2xl hover:text-white text-blueEyes text-base flex flex-row items-center justify-center gap-4">
 
-              {page === FormTitles.length - 1 ? "Submit" : 'Next Step 🡪' }
+              {page === FormTitles.length - 1 ? "Submit" :  <NextBtn/>}
              </button>
           
             

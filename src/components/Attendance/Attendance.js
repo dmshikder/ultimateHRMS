@@ -27,7 +27,7 @@ const Attendance = () => {
 
       <table class=" flex flex-col items-center gap-6 ">
         <thead>
-          <tr className="flex flex-row gap-10 mt-6 bg-red-300 px-6 rounded md:w-640 md:items-center md:justify-evenly md:py-4">
+          <tr className="text-black flex flex-row gap-10 mt-6 bg-red-300 px-6 rounded md:w-640 md:items-center md:justify-evenly md:py-4">
             <th>ID</th>
             <th>Name</th>
             <th>Position</th>
@@ -38,7 +38,7 @@ const Attendance = () => {
           {
             Object.keys(users).map((key,i)=>{
               return(
-                <tr className="flex flex-row gap-10 items-center bg-green-300 px-6 py-4 md:w-640 md:items-center md:justify-evenly md:rounded border-2 " key={i}>
+                <tr className="flex flex-row gap-10 items-center bg-green-300 text-black px-6 py-4 md:w-640 md:items-center md:justify-evenly md:rounded border-2 " key={i}>
                   <td>{users[key].id}</td>
                   <td className="w-16 md:w-28 text-left">{users[key].name}</td>
                   <td className="w-16 md:w-24">{users[key].position}</td>

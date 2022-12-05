@@ -5,7 +5,7 @@ const PersonalInfo = ({ formData, setFormData }) => {
     <>
       <div className="flex flex-col gap-16">
         <input
-          className="border-b w-72"
+          className="border-b w-72 bg-white"
           type="text"
           name=""
           id=""
@@ -15,7 +15,7 @@ const PersonalInfo = ({ formData, setFormData }) => {
           
          required/>
         <input
-          className="border-b w-72"
+          className="border-b w-72 bg-white"
           type="text"
           name=""
           id=""

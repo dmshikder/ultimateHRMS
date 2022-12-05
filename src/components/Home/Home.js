@@ -5,7 +5,7 @@ import Signup from '../Signup/Signup';
 
 const Home = () => {
   return (
-    <div className=" bg-base-100 mt-10 flex flex-col justify-center items-center lg:flex-row ">
+    <div className=" mt-10 flex flex-col justify-center items-center lg:flex-row bg-white">
   <div className='flex flex-col items-center justify-center'>
     <Logo/>
     <img src={image} alt="" />

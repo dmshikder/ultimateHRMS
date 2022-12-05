@@ -36,19 +36,19 @@ const Login = () => {
 
 
   return (
-    <div className="card lg:card-side bg-base-100 mt-10">
-    <div>
+    <div className=" bg-white mt-10 flex flex-col justify-center items-center lg:flex-row ">
+    <div className='flex flex-col items-center justify-center'>
       <Logo/>
       <img src={image} alt="" />
     </div>
     <div>
 
     <form onSubmit={(e)=>handleSubmit(e)}>
-    <div className="form-container w-516 h-630 border-2 flex flex-col items-center">
-    <p className='mt-16 mb-10'>Log in Form</p>
+    <div className=" w-80  h-448 border-2 flex flex-col items-center shadow-bShadow md:w-640 md:mb-10 lg:w-480 lg:mr-5 xl:w-640 ">
+    <p className='mt-16 mb-10 text-xl font-semibold md:text-3xl'>Log in Form</p>
        <div className='flex flex-col gap-10'>
        <input onChange={(e)=>setEmail(e.target.value)}
-          className="border-b w-368"
+          className="border-b w-72 md:w-96 md:placeholder:text-2xl bg-white"
           type="text"
           name=""
           id=""
@@ -57,7 +57,7 @@ const Login = () => {
           
         />
         <input onChange={(e)=>setPassword(e.target.value)}
-          className="border-b w-368"
+          className="border-b w-72 md:w-96 md:placeholder:text-2xl bg-white"
           type="password"
           name=""
           id=""
@@ -65,8 +65,8 @@ const Login = () => {
        
         />
        </div>
-      <p className='-ml-28'>Your password must be 8 character</p>
-        <button className="w-36 h-12 mt-16 bg-blueEyes rounded-2xl text-white text-base flex flex-row items-center justify-center">Login</button>
+      <p className='-ml-10 md:-ml-32'>Your password must be 8 character</p>
+        <button className="w-36 h-12 mt-16 bg-white hover:bg-blueEyes border-2 border-blueEyes text-blueEyes rounded-2xl hover:text-white text-base flex flex-row items-center justify-center">Login</button>
       <p className="mt-10"> Don't have an account? <span className='underline font-semibold text-blueEyes'><Link to='/'>SIGNUP HERE</Link></span></p>
       </div>
 
